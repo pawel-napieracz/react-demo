@@ -13,6 +13,7 @@ export default class LoginPage extends React.Component {
     ApiService.get(`/token/${login}`)
         .then(body => {
           sessionStorage.setItem('jwt', body.jwt);
+          this.props.onLoginSuccess(body.jwt);
         })
         .catch(_ => this.setState({error:true}));
   }
