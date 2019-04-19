@@ -13,7 +13,7 @@ export default class Header extends React.Component {
     return (
         <Menu stackable>
           <Menu.Item>
-            <img src='https://react.semantic-ui.com/logo.png'/>
+            <img src='https://react.semantic-ui.com/logo.png' alt=''/>
           </Menu.Item>
 
           <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick}>Home</Menu.Item>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LoginPage from "./pages/LoginPage";
 import RestaurantsPage from "./pages/RestaurantsPage";
+import RestaurantPage from "./pages/RestaurantPage";
 
 export default class Root extends Component {
   state = {
@@ -15,7 +16,7 @@ export default class Root extends Component {
     if(!this.state.jwt) {
       return <LoginPage onLoginSuccess={this.onLoginSuccess.bind(this)}/>
     } else {
-      return <RestaurantsPage/>
+      return <RestaurantPage id={1}/>
     }
   }
 }

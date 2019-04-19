@@ -1,0 +1,11 @@
+.restaurant-header {
+  color: white;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px;
+}
+
+.restaurant-header__name {
+  text-align: center;
+}
