@@ -2,22 +2,17 @@ import React from 'react';
 import LoginBox from '../components/login/LoginBox';
 import MsgBox from '../components/MsgBox';
 
+import ApiService from '../services/ApiService';
+
 export default class LoginPage extends React.Component {
   state = {};
 
   login(login, password) {
     console.log('ajax call', login, password);
 
-    fetch(`https://virtserver.swaggerhub.com/react-demo/React-demo/1.0.2/token/${login}`)
-        .then(function (response) {
-          if (response.ok) {
-            return response.json();
-          }
-          throw new Error(response.url + response.status);
-        })
+    ApiService.get(`/token/${login}`)
         .then(body => {
-          sessionStorage.setItem('jwt', body.jwt)
-          console.log('logged');
+          sessionStorage.setItem('jwt', body.jwt);
         })
         .catch(_ => this.setState({error:true}));
   }
