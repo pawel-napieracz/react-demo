@@ -1,6 +1,7 @@
 import React from 'react';
 import RestaurantList from '../components/restaurant/RestaurantList';
 import ApiService from '../services/ApiService';
+import Header from "../components/header/Header";
 
 export default class RestaurantsPage extends React.Component {
 
@@ -19,7 +20,12 @@ export default class RestaurantsPage extends React.Component {
   }
 
   render() {
-    return (<RestaurantList restaurants={this.state.restaurants}/>);
+    return (
+      <div>
+        <Header/>
+        <RestaurantList restaurants={this.state.restaurants}/>
+      </div>
+    );
   }
 
 }
