@@ -14,3 +14,9 @@ npm install semantic-ui-react
 ```bash
 npm start
 ```
+
+The browser opens on http://localhost:3000
+
+Use the following credentials to sign in:
+* Login: `react`
+* Password: `demo`
