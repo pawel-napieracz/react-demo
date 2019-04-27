@@ -21,14 +21,16 @@ export default class LoginBox extends React.Component {
     return (
         <Form>
           <Form.Field>
-            <label>Login</label>
-            <Input placeholder='Login' onBlur={this.onLoginInputBlur.bind(this)} />
+            <label>Username
+              <Input onBlur={this.onLoginInputBlur.bind(this)}/>
+            </label>
           </Form.Field>
           <Form.Field>
-            <label>Password</label>
-            <Input placeholder='Password' onBlur={this.onPasswordInputBlur.bind(this)} />
+            <label>Password
+              <Input onBlur={this.onPasswordInputBlur.bind(this)} type='password'/>
+            </label>
           </Form.Field>
-          <Button type='submit' onClick={this.onSubmitBtnClicked.bind(this)}>Submit</Button>
+          <Button type='submit' onClick={this.onSubmitBtnClicked.bind(this)}>Sign in</Button>
         </Form>);
   }
 }
