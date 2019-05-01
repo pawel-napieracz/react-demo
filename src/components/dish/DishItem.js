@@ -21,10 +21,10 @@ export default class DishItem extends React.Component {
     let {name, description, price, image} = this.props;
     return (
         <Item>
-          <Item.Image src={image} />
+          <Item.Image src={image} alt=''/>
 
           <Item.Content>
-            <Item.Header as='a'>{name}</Item.Header>
+            <Item.Header as='h2'>{name}</Item.Header>
             <Item.Meta>
               <span>Price: {this.getFormattedPrice(price)}</span>
             </Item.Meta>

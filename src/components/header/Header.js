@@ -9,7 +9,7 @@ export default class Header extends React.Component {
 
   render() {
     const {activeItem} = this.state;
-
+    // Menu.Item with just an onClick isn't keyboard accessible because there's no href on the rendered link
     return (
         <Menu stackable>
           <Menu.Item>
@@ -21,7 +21,7 @@ export default class Header extends React.Component {
           <Menu.Menu position='right'>
             <Menu.Item name='cart' active={activeItem === 'cart'}>
               <div>
-                <Icon name='cart' size='huge'/>
+                <Icon name='cart' size='huge' aria-label='Number of items in cart:'/>
                 <Label className='cart-label' color='red' floating>1</Label>
               </div>
             </Menu.Item>

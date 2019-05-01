@@ -7,7 +7,7 @@ export default class RestaurantsPage extends React.Component {
 
   state = {
     restaurants: []
-  }
+  };
 
   componentDidMount() {
     ApiService.get('/restaurants')
@@ -23,6 +23,7 @@ export default class RestaurantsPage extends React.Component {
     return (
       <div>
         <Header/>
+        <h1>Restaurants</h1>
         <RestaurantList restaurants={this.state.restaurants}/>
       </div>
     );
